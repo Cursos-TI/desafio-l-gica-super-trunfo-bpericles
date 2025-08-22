@@ -31,6 +31,9 @@ int main() {
     float Dens02;
     float PibPercaoita02;
 
+    // Comparação
+    int opcao;
+
     
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -149,69 +152,101 @@ int main() {
     //     printf("Cidade 2 tem maior população.\n");
     // }
 
-    //Comparação População
+    // Escolha dos atributos para a comparação
 
+    printf("*** Digite o numero referente a comparação dos atributos *** \n");
+    printf("\n");
+    printf("1 - Comparar População \n");
+    printf("2 - Comparar Área por KM \n");
+    printf("3 - Comparar PIB \n");
+    printf("4 - Comparar Pontos Turisticos \n");
+    scanf(" %d ", &opcao);
 
-    if(populacao > populacao02){
+    switch (opcao)
+    {
+    case 1: // comparando população
+        if(populacao > populacao02){
         printf("***Comparação de cartas (Atributo: População):***\n");
         printf("Numero de habitantes carta 01: %lu \n", populacao);
         printf("Numero de habitantes carta 02: %lu \n", populacao02);
         printf("Cidade 1 - Venceu! \n");
+
+    }else if (populacao == populacao02){
+       printf("***Comparação de cartas (Atributo: População):***\n");
+        printf("Numero de habitantes carta 01: %lu \n", populacao);
+        printf("Numero de habitantes carta 02: %lu \n", populacao02);
+        printf("Empate\n");
     }else{
         printf("***Comparação de cartas (Atributo: População):***\n");
         printf("Numero de habitantes carta 01: %lu \n", populacao);
-        printf("Numero de habitantes carta 01: %lu \n", populacao02);
+        printf("Numero de habitantes carta 02: %lu \n", populacao02);
         printf("Cidade 2 - Venceu! \n");
 
     }
+        break;
 
-    //Comparação Area
-
-    if(areaemkm > areaemkm02){
+    case 2: // comparando Área por KM
+        if(areaemkm > areaemkm02){
         printf("***Comparação de cartas (Atributo: Area por Km):***\n");
         printf("Numero de habitantes carta 01: %.2f \n", areaemkm);
         printf("Numero de habitantes carta 02: %.2f \n", areaemkm02);
         printf("Cidade 1 - Venceu! \n");
+    }else if (areaemkm == areaemkm02){
+       printf("***Comparação de cartas (Atributo: Area por Km):***\n");
+        printf("Numero de habitantes carta 01: %.2f \n", areaemkm);
+        printf("Numero de habitantes carta 02: %.2f \n", areaemkm02);
+        printf("Empate\n");
     }else{
         printf("***Comparação de cartas (Atributo: Area por Km):***\n");
         printf("Numero de habitantes carta 01: %.2f \n", areaemkm);
         printf("Numero de habitantes carta 02: %.2f \n", areaemkm02);
         printf("Cidade 2 - Venceu! \n");
     }
-    //Comparação Pib
-
-    if(pib > pib02){
+        break;
+    case 3: // comparando PIB
+        if(pib > pib02){
         printf("***Comparação de cartas (Atributo: Pib):***\n");
         printf("Numero de habitantes carta 01: %.2f \n", pib);
         printf("Numero de habitantes carta 02: %.2f \n", pib02);
         printf("Cidade 1 - Venceu! \n");
-    } else {
+    } else if (pib == pib02){
+       printf("***Comparação de cartas (Atributo: Pib):***\n");
+        printf("Numero de habitantes carta 01: %.2f \n", pib);
+        printf("Numero de habitantes carta 02: %.2f \n", pib02);
+        printf("Empate\n");
+    }else {
         printf("***Comparação de cartas (Atributo: Pib):***\n");
         printf("Numero de habitantes carta 01: %.2f \n", pib);
         printf("Numero de habitantes carta 02: %.2f \n", pib02);
         printf("Cidade 2 - Venceu! \n");
     }
-
-    //Comparação Pontos Turistico
-
-    if(NumeroPontosTuristico > NumeroPontosTuristico02){
+        break;
+        
+    case 4: // comparando Pontos Turisticos
+        if(NumeroPontosTuristico > NumeroPontosTuristico02){
         printf("***Comparação de cartas (Atributo: Pontos Turisticos):***\n");
         printf("Numero de habitantes carta 01: %d \n", NumeroPontosTuristico);
         printf("Numero de habitantes carta 02: %d \n", NumeroPontosTuristico02);
         printf("Cidade 1 - Venceu! \n");
-    } else {
+    } else if (NumeroPontosTuristico == NumeroPontosTuristico02){
+       printf("***Comparação de cartas (Atributo: Pontos Turisticos):***\n");
+        printf("Numero de habitantes carta 01: %d \n", NumeroPontosTuristico);
+        printf("Numero de habitantes carta 02: %d \n", NumeroPontosTuristico02);
+        printf("Empate\n");
+    }else {
         printf("***Comparação de cartas (Atributo: Pontos Turisticos):***\n");
         printf("Numero de habitantes carta 01: %d \n", NumeroPontosTuristico);
         printf("Numero de habitantes carta 02: %d \n", NumeroPontosTuristico02);
         printf("Cidade 2 - Venceu! \n");
     }
+        break;
+    
+    default:
+    printf("Opção invalida");
+        break;
+    }
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
     return 0;
     }
