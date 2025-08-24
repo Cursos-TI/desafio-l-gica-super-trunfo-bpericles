@@ -33,6 +33,7 @@ int main() {
 
     // Comparação
     int opcao;
+    int opcao02;
 
     
     // Cadastro das Cartas:
@@ -160,9 +161,96 @@ int main() {
     printf("2 - Comparar Área por KM \n");
     printf("3 - Comparar PIB \n");
     printf("4 - Comparar Pontos Turisticos \n");
-    scanf(" %d ", &opcao);
+    printf("Digite o primeiro atributo que você quer comparar!\n");
+    scanf("%d ", &opcao);
+    printf("Digite o segundo atributo que você quer comparar!\n");
+    scanf("%d ", &opcao02);
 
     switch (opcao)
+    {
+    case 1: // comparando população
+        if(populacao > populacao02){
+        printf("***Comparação de cartas (Atributo: População):***\n");
+        printf("Atributo: População - carta 01: %lu \n", populacao);
+        printf("Atributo: População - carta 02: %lu \n", populacao02);
+        printf("Cidade 1 - Venceu! \n");
+
+    }else if (populacao == populacao02){
+       printf("***Comparação de cartas (Atributo: População):***\n");
+        printf("Atributo: População - carta 01: %lu \n", populacao);
+        printf("Atributo: População - carta 02: %lu \n", populacao02);
+        printf("Empate\n");
+    }else{
+        printf("***Comparação de cartas (Atributo: População):***\n");
+        printf("Atributo: População - carta 01: %lu \n", populacao);
+        printf("Atributo: População - carta 02: %lu \n", populacao02);
+        printf("Cidade 2 - Venceu! \n");
+
+    }
+        break;
+
+    case 2: // comparando Área por KM
+        if(areaemkm > areaemkm02){
+        printf("***Comparação de cartas (Atributo: Area por Km):***\n");
+        printf("Atributo: Area por Km - carta 01: %.2f \n", areaemkm);
+        printf("Atributo: Area por Km - carta 02: %.2f \n", areaemkm02);
+        printf("Cidade 1 - Venceu! \n");
+    }else if (areaemkm == areaemkm02){
+       printf("***Comparação de cartas (Atributo: Area por Km):***\n");
+        printf("Atributo: Area por Km - carta 01: %.2f \n", areaemkm);
+        printf("Atributo: Area por Km - carta 02: %.2f \n", areaemkm02);
+        printf("Empate\n");
+    }else{
+        printf("***Comparação de cartas (Atributo: Area por Km):***\n");
+        printf("Atributo: Area por Km - carta 01: %.2f \n", areaemkm);
+        printf("Atributo: Area por Km - carta 02: %.2f \n", areaemkm02);
+        printf("Cidade 2 - Venceu! \n");
+    }
+        break;
+    case 3: // comparando PIB
+        if(pib > pib02){
+        printf("***Comparação de cartas (Atributo: Pib):***\n");
+        printf("Atributo: Pib - carta 01: %.2f \n", pib);
+        printf("Atributo: Pib - carta 02: %.2f \n", pib02);
+        printf("Cidade 1 - Venceu! \n");
+    } else if (pib == pib02){
+       printf("***Comparação de cartas (Atributo: Pib):***\n");
+        printf("Atributo: Pib - carta 01: %.2f \n", pib);
+        printf("Atributo: Pib - carta 02: %.2f \n", pib02);
+        printf("Empate\n");
+    }else {
+        printf("***Comparação de cartas (Atributo: Pib):***\n");
+        printf("Atributo: Pib - carta 01: %.2f \n", pib);
+        printf("Atributo: Pib - carta 02: %.2f \n", pib02);
+        printf("Cidade 2 - Venceu! \n");
+    }
+        break;
+        
+    case 4: // comparando Pontos Turisticos
+        if(NumeroPontosTuristico > NumeroPontosTuristico02){
+        printf("***Comparação de cartas (Atributo: Pontos Turisticos):***\n");
+        printf("Atributo: Pontos Turisticos - carta 01: %d \n", NumeroPontosTuristico);
+        printf("Atributo: Pontos Turisticos - carta 02: %d \n", NumeroPontosTuristico02);
+        printf("Cidade 1 - Venceu! \n");
+    } else if (NumeroPontosTuristico == NumeroPontosTuristico02){
+       printf("***Comparação de cartas (Atributo: Pontos Turisticos):***\n");
+        printf("Atributo: Pontos Turisticos - carta 01: %d \n", NumeroPontosTuristico);
+        printf("Atributo: Pontos Turisticos - carta 02: %d \n", NumeroPontosTuristico02);
+        printf("Empate\n");
+    }else {
+        printf("***Comparação de cartas (Atributo: Pontos Turisticos):***\n");
+        printf("Atributo: Pontos Turisticos - carta 01: %d \n", NumeroPontosTuristico);
+        printf("Atributo: Pontos Turisticos - carta 02: %d \n", NumeroPontosTuristico02);
+        printf("Cidade 2 - Venceu! \n");
+    }
+        break;
+    
+    default:
+    printf("Opção invalida");
+        break;
+    }
+
+    switch (opcao02)
     {
     case 1: // comparando população
         if(populacao > populacao02){
