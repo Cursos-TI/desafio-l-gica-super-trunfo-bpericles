@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 // Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
@@ -91,9 +93,9 @@ int main() {
 
   
 
-    Dens = (float)(populacao) / areaemkm;
+    //Dens = (float)(populacao) / areaemkm;
     //PibPercaoita = (float)(pib)/ populacao;
-    PibPercaoita = (float)(pib * 1000000000.0f)/ populacao;
+    //PibPercaoita = (float)(pib * 1000000000.0f)/ populacao;
 
     printf("\n"); 
 
@@ -137,9 +139,9 @@ int main() {
     printf("Digite a quantidade de pontos turistos na cidade: \n");
     scanf("%d", &NumeroPontosTuristico02);
 
-    Dens02 = (float)(populacao02) / areaemkm02;
+   // Dens02 = (float)(populacao02) / areaemkm02;
    // PibPercaoita02 = (float)(pib02)/ populacao02;
-    PibPercaoita02 = (float)(pib02 * 1000000000.0f) / populacao02;
+   // PibPercaoita02 = (float)(pib02 * 1000000000.0f) / populacao02;
 
 
     // Comparação de Cartas:
